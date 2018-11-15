@@ -1,0 +1,6 @@
+nohup: ignoring input
+Connected
+[0mGET / [36m304 [0m5.444 ms - -[0m
+[0mGET /javascripts/comment.js [36m304 [0m2.087 ms - -[0m
+[0mGET /stylesheets/style.css [32m200 [0m5.217 ms - 1590[0m
+[0mGET /comments [36m304 [0m16.467 ms - -[0m

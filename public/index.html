@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Violin Classes Stduent Info</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="javascripts/comment.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">  
+  <link href="stylesheets/style.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="comment" ng-controller="MainCtrl">
+    <div class="row">
+       
+            <div class="page-header">
+               <h1>Violin Classes</h1><br>
+               <div id="chatbox">
+                   <div class="card-header">Student Information</div>
+            
+                   <form ng-submit="addComment()" class="simple-form">
+                <input type="text" ng-model="formContent"></input>
+                <button type="submit">Add Student</button>
+            </form>
+             <div class="card-header">
+            <div ng-repeat="comment in comments | orderBy: '-upvotes'">
+                 <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
+                <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span> {{comment.title}} - played: {{comment.upvotes}}
+            </div>
+            </div>
+        </div>
+    
+</body>
+
+</html>
